@@ -1,13 +1,15 @@
-#Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y).
-print('введите номер четверти от 1 до 4')
-a = int(input())
-if a < 1 or a > 4:
-  print ('некорректный ввод')  
-elif a == 1 :
-  print ('x > 0 and y > 0')
-elif  a == 2 :
-  print ('x > 0 and y < 0') 
-elif  a == 3 :
-  print ('x < 0 and y < 0') 
-else :
-  print ('x < 0 and y > 0')
+#Реализуйте алгоритм перемешивания списка.
+from random import randint, sample
+from random import shuffle
+
+N = int(input("Введите число N: "))
+mass = []
+
+for i in range (2*N+1):
+    mass.append(randint(-N, N))
+print(f"Последовательность 2N+1 чисел от {-N} до {N}:  {mass}")
+b = sample(mass, len(mass))
+print(f"перемешанный список {b}")
+
+
+
